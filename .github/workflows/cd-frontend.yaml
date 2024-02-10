@@ -27,7 +27,7 @@ jobs:
         SOURCE_DIR: 'front-end'
     
   invalidate-cloudfront-distribution:
-    name: cloudfront distribution invalidation
+    name: Cloudfront Distribution Invalidation
     needs: copy-website-to-s3
     runs-on: ubuntu-latest
     steps:
