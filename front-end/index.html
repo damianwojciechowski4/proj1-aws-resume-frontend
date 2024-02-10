@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>WojNetCloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!--Font Awsome-->
+  <script src="https://kit.fontawesome.com/e1d0fdeb2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>			
+	<nav>
+	 	<input type="checkbox" id="check">
+      	<label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      	</label>
+		<label class="logo">WojNetCloud</label>
+		<!--Unordered bulleted list - AKA MENU-->
+		<ul>
+			<li><a class="active" href="#home">Home</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#aboutme">About Me</a></li>
+		</ul>
+		<span class="Visitor counter">Visitors Counter</span>
+		<i class="fas fa-cloud"></i>
+		<div class="counter_container">
+			
+			<p id="counter_number"></p>
+			
+		</label>
+	</nav>
+		
+
+	<div class="row">
+		<div class="leftcolumn">
+		  <div class="card">
+			<h2>"The Cloud Resume Challange Cookbook (AWS Edition)"</h2>
+			<h5>Summary about the challange experience, Jan 08, 2024</h5>
+			<div class="fakeimg" style="height:200px;">
+				<h3>Step1. Checking requirements</h3>
+				<h3>Step2. Creation of proper AWS organization accounts</h3>
+				<p>Usefull tools org-formation CLI/npm - how to manage multiple organization account from one place</p>
+				<p>SSO Configuration</p>
+				<h3>Step3. Front-End Design</h3>
+				<h3>Step4. Automated CloudFront, S3, Route53 creation with IaC in CloudFormation</h3>
+				<p>Buying domain</p>
+				<p>Setting up S3</p>
+				<p>Configuration of IAM role</p>
+				<h3>Step5. Back-End Configuration</h3>
+				<p>DynamoDB Configuraiton</p>
+				<p>Lambda Python function to interact with DynamoDB through boto3 AWS SDK</p>
+				<p>Writing JS function to gather visitors counter from DynamoDB</p>
+				<p>Building the API with API Gateway</p>
+				<p>Difficulties: CORS Header </p>
+				<h3>Step6. Front-end/back-end integration</h3>
+			<p></p>
+		  </div>
+		</div>
+
+
+
+	<div class="footer">
+		<h2></h2>
+	</div>
+
+
+
+</body>
+<script src="scripts\script.js"></script>
+</html>
