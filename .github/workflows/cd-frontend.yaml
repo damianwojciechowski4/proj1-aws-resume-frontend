@@ -26,17 +26,17 @@ jobs:
         AWS_REGION: ${{ secrets.AWS_REGION }}
         SOURCE_DIR: 'front-end'
     
-    invalidate-cloudfront-distribution:
-      name: cloudfront distribution invalidation
-      needs: copy-website-to-s3
-      runs-on: ubuntu-latest
-      steps:
-        - name: Invalidate Cloudfront
-          uses: chetan/invalidate-cloudfront-action@v2
-          env:
-            DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
-            PATHS: "/*"
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            AWS_REGION: ${{ secrets.AWS_REGION }}
+  invalidate-cloudfront-distribution:
+    name: cloudfront distribution invalidation
+    needs: copy-website-to-s3
+    runs-on: ubuntu-latest
+    steps:
+    - name: Invalidate Cloudfront
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+        PATHS: "/*"
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
 
