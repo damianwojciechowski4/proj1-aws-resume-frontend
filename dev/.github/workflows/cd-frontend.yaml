@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   copy-website-to-s3:
@@ -25,6 +26,7 @@ jobs:
           SOURCE_DIR: 'front-end'
     
     invalidate-cloudfront-distribution:
+      name: cloudfront distribution invalidation
       needs: copy-website-to-s3
       runs-on: ubuntu-latest
       steps:
