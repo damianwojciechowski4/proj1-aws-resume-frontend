@@ -1,1 +1,1 @@
-# AWS wnetcloud-DEV env repo
+# AWS Resume frontend repository
