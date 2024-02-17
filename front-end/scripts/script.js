@@ -27,12 +27,12 @@ function getcounter() {
 
     // Output successful response
     XMR.onload= function(){
-        showCounter(XMR.response.message)
+        showCounter(XMR.response)
     }
 
     XMR.send(null);
-
 }
+
 
 //run this function any time the page is loading
 getcounter()
