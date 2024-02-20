@@ -18,6 +18,11 @@ function showCounter(counter) {
     document.getElementById('counter_number').innerHTML=counter
 }
 
+
+
+
+
+
 function getcounter() {
     
     XMR.open("GET",API_ENDPOINT)
@@ -32,6 +37,11 @@ function getcounter() {
 
     XMR.send(null);
 }
+
+
+
+
+
 
 
 //run this function any time the page is loading
