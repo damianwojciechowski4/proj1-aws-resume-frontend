@@ -222,6 +222,21 @@ hr.solid {
 	border-top: 2px solid #0a0a0a;
   }
 
+.section-certifications a:link, a:visited {
+	color: black;
+
+	text-align: center;
+	display: inline-block;	
+	
+}
+
+
+.section-certifications a:active, a:hover {
+	color: #02c22b;	
+	text-align: center;
+	display: inline-block;
+}
+
 
 
 
