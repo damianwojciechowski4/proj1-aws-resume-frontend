@@ -232,7 +232,7 @@ hr.solid {
 
 
 .section-certifications a:active, a:hover {
-	color: #02c22b;	
+	color: rgb(4, 5, 4);	
 	text-align: center;
 	display: inline-block;
 }
@@ -250,7 +250,7 @@ hr.solid {
   }
   
   a:hover, a:active {
-	background-color: #02c22b;
+	background-color: #0c0c0c;
   }
 
 
