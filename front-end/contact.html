@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Webpage</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+</head>
+
+
+
+<body>
+  <!-- ✅ Hamburger Menu (Mobile Only) -->
+  <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">☰</button>
+
+  <aside class="sidebar">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="portfolio.html" ><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+    <a href="files/CV_DamianWojciechowski - Network Cloud Engineer-Internet.pdf" target="_blank"><i class="fa-regular fa-file"></i> Resume</a>
+    <a href="blog.html" ><i class="fa-solid fa-bolt"></i> Blog</a>
+    <a href="contact.html"class="active"><i class="fa-regular fa-envelope"></i> Contact</a>
+  </aside>
+  <main class="main">
+    <header class="profile">
+      <div class="profile-info">
+        <div>
+          <h1>Damian Wojciechowski</h1>
+          <p class="title">Senior Network Engineer | AWS Cloud </p>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/damian--wojciechowski" target="_blank" class="linkedin-icon" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/damianwojciechowski4" target="_blank" class="github-icon" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+    <div class="contact-links">
+      <a class="btn-link" href="mailto:contact@wojnetcloud.com" id="email1">
+        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+        <span class="label">contact@wojnetcloud.com</span>
+      </a>
+      <a class="btn-link" href="files/CV_DamianWojciechowski - Network Cloud Engineer-Internet.pdf" download>
+        <span class="icon">⬇️</span>
+        <span class="label">Download CV</span>
+      </a>
+    </div>
+
+    </header>
+
+<div class="section-title">Contact</div>
+<section id="contact">
+      
+      <div class="contact-card">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">*Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">*Email</label>
+            <input type="email" id="email" name="email" placeholder="Your E-mail" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-group">
+            <label for="message">*Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+    </main>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+</html>

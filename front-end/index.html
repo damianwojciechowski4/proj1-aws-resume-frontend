@@ -1,219 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="utf-8">
-  <title>Damian Wojciechowski - Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark light">
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-minimal.min.css" integrity="sha512-Jeqp8CoPCvf9tf/uWokfCTsFcv5BIhfTYaTTJA0NKn6B88zDSWe5d/9HTmZX63FGpGGQdB8Chg2khB96+wn4Tw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Font Awsome-->
-  <script src="https://kit.fontawesome.com/e1d0fdeb2e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Webpage</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
 </head>
 
-<body>	
-<header>
-	<div class="topnav" id="myTopnav">
-	  <a href="index.html" class="active">Home</a>
-	  <a href="#blog">Blog</a>
-	  <a href="index.html#contact">Contact</a>
-	  <a href="files\CV_DamianWojciechowski.pdf">My Resume PDF</a>
-	  
-
-	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-	    <i class="fa fa-bars"></i>
-	  </a>
-	  <div class="stats-container">
-		<div class="stat">
-			<div class="type">Visitors counter</div>
-			<div class="stat-visitors visitcounter"><p id="counter_number"></p></div>
-		</div>
-	</div>
-
-</header>
-	<div>
-		
-			
 
 
-		
-		<div class="container">
-			<div class="background-image"></div>
-			<div class="title-box">
-				<div class="subtitle1">
-					<em>Hi, I'm</em>
-				</div>
-				<div class="title">
-				<h1>
-			
-					<span>Damian Wojciechowski</span>
-				
-				</h1>
-				</div>
-				<div class="subtitle2">
-					<em>and this is my Resume</em>
-				
-				
-			</div>
-		</div>
-	</div>
+<body>
+  <!-- ✅ Hamburger Menu (Mobile Only) -->
+  <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">☰</button>
 
-	
-		<div class="row">
-			<div class="column side">
-  			</div>
-			
-			<div class="column middle">
-				<h1>Profile</h1>
-				<p>Senior Network Engineer familiar with technologies concerning LAN, WLAN, VPN, WAN, SD-WAN, routers, firewalls, switches, access points, DNS, GSLB, Reverse/Forward Proxy, DHCP.
-				I'm constantly learning new technologies and looking for ways to apply them to my job.
-				I am currently working on professional proficiency in the DevOps area. 
-				<br>I have hands-on and theoretical knowledge in AWS public cloud, as evidenced by the certifications I have obtained.
-					</p>
-					<hr class="solid">
-				
-				<div class="section-content">
-					<div class="section-skills">
-						<h1>Skills</h1>
-							<ul>
-								<li>Cloud Providers: <strong>AWS</strong></li>
-								<li>Vendors: <strong>Cisco, Juniper, Fortinet(FortiGate), PaloAlto, Infoblox, Ucopia, Dell, VMware (VeloCloud SASE), Microsoft, Linux  </strong></li>
-								<li>Virtualization: <strong> KVM, Hyper-V, EVE-NG, VMware Workstation</strong>
-								<li>Programming/Scripting: <strong>Python, bash, html, basics of php </strong>	
-								<li>DevOps tools: <strong>GIT, GitHub Actions, Terraform, basics of Docker, Linux </strong></li>
-								</ul>
-							<hr class="solid">
-					</div>
-					
-					<div class="section-certifications">
-						<h1>Certifications</h1>
-							<ul>
-								<li>AWS Solutions Architect Associate&ensp;
-									<br><a href="https://www.credly.com/badges/ae784a3f-77dc-4a6d-b005-79c1a5dfae31/linked_in_profile" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px;color: #02c22b;" ></a> </li> 
-								
-								<li>AWS Certified Cloud Practitioner
-									<br><a href="https://www.credly.com/badges/5e8ba6f4-7f53-4366-92cf-8a6b2fb5364c/linked_in_profile" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px;color: #02c22b;" ></a> </li>
-								<li>Juniper JNCIA-SEC
-									<br><a href="https://www.credly.com/badges/e5443399-4e57-4232-a17f-00976a1f0498/linked_in_profile" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px;color: #02c22b;" ></a> </li>
-								<li>Cisco CCNA 200-301
-									<br><a href="https://www.credly.com/badges/320a1697-91f6-45cb-9c54-a7589885987c/linked_in_profile" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px;color: #02c22b;" ></a> </li>
-								<li>Infoblox CDCA
-									<br><a href="files\20191115-CDCA-Core-DDI-Configuration-Administration-81-Accreditation.pdf" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px; color: #02c22b;"></a> </li>
-								</li>
-								<li>Infoblox CDAT
-									<br><a href="files\20200518-CDAT-Core-DDI-Advanced-Troubleshooting-v80-Accreditation.pdf" target="_blank"
-									target="_blank" class="fa fa-external-link" style="font-size:16px;color: #02c22b;"></a> </li>
-							
-
-
-							</ul>
-							<hr class="solid">
-					</div>
-					
-
-					<div class="section-experience">
-						<h1>Professional Experience</h1>
-						<h5>Senior Network Engineer </h5>  
-						2022 - now
-							<ul>
-								Tier 3 support of Data Center and LAN networks in multivendor environments. 
-								Working on customer projects. 
-								<br>Since last 6 months I'have been working on desing and migration from MPLS WAN into SD-WAN by VeloCloud.
-								<br>I'm writing Python scripts for simple and repeatable tasks automation and for migration purposes. 
-								<br>I'm taking part in the daily operations on multiple vendor platforms including firewall features implementation, routing, switching, wireless access points and wireless controllers, hardware replacement, software upgrade, migrations.<br>
-								Implementation of new solutions, writing and updating drawings and HLD/LLD documentation. 
-								Working on new customer transitions, providing knowledge transfers and being a mentor to lower tier engineers. Organizing workshops for the Team.
-								<br> Proactive management of the incidents and improving customer networks security and performance. 
-								Providing incidents management and investigation. Working with vendor TAC to investigate unexpected problems with the devices. 
-							</ul>
-						<h5>Network Engineer </h5>  
-						2020 - 2022
-						<ul>
-								Tier 2 support of multiple customers in multivendor environments.
-								Working on RUN activities concerning maintanance of existing infrastructure by applying changes on firewalls, switches, routes, wireless controllers and loadbalancers.
-								<br>Actively participating in investigation of on-going problems in customer environments.
-								<br>Participation in customer handover, doing knowledge transfer session to the new team members.
-								<br>Organizing training session to all team members.
-						</ul>
-
-						<h5>DDI Network Engineer </h5>  
-						2018 - 2020
-						<ul>
-								L2-L3 support of multiple customers DDI infrastructure: IPAM, DNS, DHCP (BIND, VitalQIP, Infoblox, Windows) and Radius (Windows NPS). 
-								Taking part in the projects including deployment of customer environments based on Infoblox and Windows technologies.
-								Working on transitions, KT sessions, product presentations to the stakeholders.
-								Troubleshooting and incident management.
-
-						</ul>
-						<hr class="solid">
-					</div>
-
-					
-					<div class="section-projects">
-					<h1>Projects</h1>
-					<ul>
-					<li> <h4>Cloud Resume Challange</h4> </li>
-					<a href="https://github.com/damianwojciechowski4/proj1-aws-resume-frontend" title="CloudResumeGithub">GitHub Frontend</a>
-					<a href="https://github.com/damianwojciechowski4/proj1-aws-resume-backend" title="CloudResumeGithub">GitHub Backend</a>			
-					</ul>				
-					<hr class="solid">
-					</div>
-
-					
-					<div class="section-education">
-						<h1>Education</h1>
-						<ul>
-							<li style="font-weight: bold;">UNIVERISTY OF TECHNOLOGY AND SCIENCE IN BYDGOSZCZ</li>
-							<p>2016-2020</p>
-							<ul style="font-weight: bold;">Bachelor of Science – Information and Communications Technology</ul>
-							<br>
-							<li style="font-weight: bold;">ELECTRONIC TECHNICAL SCHOOL IN BYDGOSZCZ</li> 
-							<p>2012-2016</p>
-							<ul style="font-weight: bold;">ICT Technician</ul>
-						</ul>
-						<hr class="solid">
-					</div>
-					
-					
-					<div class="section-contact" id="contact">
-						<h1>Contact</h1>
-						
-						<a href="https://www.linkedin.com/in/damianwojciechowskinetwork/" class="fa fa-linkedin-square" target="_blank" style="font-size:48px;color:rgb(0, 132, 255)"></a>
-						<a href="mailto:contact@wojnetcloud.com" class='fas fa-envelope-open'  target="_blank" style="font-size:48px;color:rgb(14, 14, 14)"></a>
-						<a href="https://github.com/damianwojciechowski4" class="fa fa-github"  target="_blank" style="font-size:36px;color:black"></a>
-					</div>
-
-				
-			</div>
-
-			<div class="column side">
-			</div>
-		</div>
-			
-		</div>
-	</div>
+  <aside class="sidebar">
+    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="portfolio.html" ><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+    <a href="files/CV_DamianWojciechowski - Network Cloud Engineer-Internet.pdf" target="_blank"><i class="fa-regular fa-file"></i> Resume</a>
+    <a href="blog.html"><i class="fa-solid fa-bolt"></i> Blog</a>
+    <a href="contact.html"><i class="fa-regular fa-envelope"></i> Contact</a>
+  </aside>
+  <main class="main">
+    <header class="profile">
+      <div class="profile-info">
+        <div>
+          <h1>Damian Wojciechowski</h1>
+          <p class="title">Senior Network Engineer | AWS Cloud </p>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/damian--wojciechowski" target="_blank" class="linkedin-icon" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/damianwojciechowski4" target="_blank" class="github-icon" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
 
 
-	
-	
-	
+      
+    <div class="contact-links">
+      <a class="btn-link" href="mailto:contact@wojnetcloud.com">
+        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+        <span class="label">contact@wojnetcloud.com</span>
+      </a>
+      <a class="btn-link" href="files/CV_DamianWojciechowski - Network Cloud Engineer-Internet.pdf" download>
+        <span class="icon">⬇️</span>
+        <span class="label">Download CV</span>
+      </a>
+    </div>
 
-<div class="footer">
-	<h2></h2>
-</div>
+    </header>
+<section id="about">
+  <div class="section-title">About Me</div>
+  <div class="about-content">
+    
+    <!-- Bio -->
+    <div class="bio">
+      <p>
+        I'm a Senior Network Engineer with seven years of experience designing, deploying, and optimizing large-scale network and security solutions for enterprise environments. 
+        My expertise spans network architecture, troubleshooting, and leading cross-functional projects - particularly in complex data center environments, branch networks, and SD-WAN deployments. 
+        I’m passionate about infrastructure automation, solving intricate connectivity challenges, and mentoring technical teams through global implementations.
+        <p>I hold multiple AWS certifications and have a solid foundation in cloud networking. I'm especially interested in how cloud technologies can enhance network performance and security. 
+        <p>I also enjoy home labbing and experimenting with open-source solutions. Currently, I’m focused on deepening my skills in AWS and expanding my cloud capabilities. </p>
+        <p>Feel free to explore my portfolio for examples of my work and certifications.</p>
 
+        <p>Outside of tech, I enjoy football, cycling, working out at the gym, traveling, and most of all—spending quality time with my family.</p>
+    </div>
+    <div class="profile-picture">
+      <img src="images/me.jpg" alt="Damian Wojciechowski" class="about-photo" />
+    </div>
+    <div class="skills">
+      <h3>Core Skills</h3>
+      <ul class="skill-list">
+        <li class="skill-item">AWS VPC &amp; Networking</li>
+        <li class="skill-item">AWS Serverless</li>
+        <li class="skill-item">Terraform &amp; Basics of CloudFormation</li>
+        <li class="skill-item">Python</li>
+        <li class="skill-item">GIT</li>
+        <li class="skill-item">Routing</li>
+        <li class="skill-item">SD-WAN</li>
+        <li class="skill-item">Switching</li>
+        <li class="skill-item">Firewalls</li>
+        <li class="skill-item">Load Balancing</li>
+        <li class="skill-item">Reverse Proxy</li>
+        <li class="skill-item">DNS</li>
+        <li class="skill-item">DHCP</li>
+        <li class="skill-item">Network Virtualization</li>
+        <li class="skill-item">Linux Administration</li>
+        <li class="skill-item">Docker</li>
+      </ul>
+    </div>
 
+    <!-- Experience -->
+    <div class="experience">
+      <h3>Experience</h3>
+      <ul class="timeline">
+        <li>
+          <span class="period">2024 – Present</span>
+          <strong>Senior Network Engineer</strong> @ ERGO Technology & Services S.A.<br/>
+          • Led a global SD‑WAN rollout for financial and insurance clients, boosting network performance and security.<br>
+          • Redesigned customer networks around Zero‑Trust principles.<br>
+          • Delivered Tier‑3 troubleshooting across multi‑vendor environments.<br>
+          • Automated SD-WAN appliance deployment using API scripts saving time and human resources.<br>
+          • Built PoC solutions and sandboxes for migration purposes.<br>
+          • Actively integrated AWS services into global network architecture, streamlining hybrid cloud infrastructure.<br>
+        </li>
+        <li>
+          <span class="period">2022 – 2024</span>
+          <strong>Senior Network Engineer</strong> @ Atos GDC <br/>
+          Tier‑3 lead for network integration and maintenance projects.<br>
+          • Drove life‑cycle and patch management for firewalls, switches, routers, and wireless controllers.<br>
+          • Researched and resolved complex infrastructure issues.<br>
+          • Authored and updated comprehensive technical documentation.<br>
+          • Automated routine tasks with Python scripts.<br>
+          • Guided new‑customer transitions and mentored junior engineers.<br>
+        
+        </li>
+
+        <li>
+          <span class="period">2020 – 2022</span>
+          <strong>Network Engineer</strong> @ Atos GDC <br/>
+          Tier‑2 support for enterprise network services.<br>
+          • LAN<br>
+          • VPN<br>
+          • WAN<br>
+          • WLAN<br>
+          • routers<br>
+          • firewalls<br>
+          • switches<br>
+        </li>
+        <li>
+          <span class="period">2018 – 2020</span>
+          <strong>DDI Network Engineer</strong> @ Atos GDC <br/>
+          Tier‑2 support of DDI services.<br>
+          Technologies: <br>
+          • DNS/DHCP/IPAM/Radius
+          • Infoblox <br>
+          • Windows Server (DNS, DHCP, AD, NPS) <br>
+          • Linux <br>
+          • VitalQIP <br>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <script src="scripts/common.js"></script>
 
 </body>
-<script src="scripts\script.js"></script>
-<script src="scripts\navbar.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>

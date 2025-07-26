@@ -1,0 +1,608 @@
+:root {
+  /* Color palette */
+  --bg: #1e1f26;
+  --bg-card: #252733;
+  --accent: #ff7d55;
+  --blue: #4f83ff;
+  --text: #ffffff;
+  --text-secondary: #a5a8b1;
+  --orange: #ff7d55;
+  --orange-dark: #e06650;
+  --text-light: #ffffff;
+  --placeholder: #999999;
+  --input-border: #cccccc;
+}
+
+/*** RESET & BASE ***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+
+
+  /*** TYPOGRAPHY ***/
+  h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5em; }
+  h2 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5em; }
+  h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 0.5em; }
+  p { font-size: 1.5rem;line-height: 1.6; }
+  .section-title { font-size: 1.75rem; margin-bottom: 1rem; }
+      
+  p.caption {
+      font-size: 16px;
+      color: #5f6368;
+      margin-top: 0.2em;
+    }
+  p.title {
+    font-size: 1.5rem;
+  }
+
+a { 
+  text-decoration: none; 
+  font-size: 1.25rem;
+
+}
+
+span {
+  text-decoration: none; 
+  font-size: 1.25rem;
+}
+
+span.label{
+  text-decoration: none; 
+  font-size: 1.15rem;
+}
+button { font-size: 1.5rem;background: none; border: none; cursor: pointer; }
+  
+  
+  
+  /*** LAYOUT ***/
+  .sidebar {
+    width: 200px;
+    background: var(--bg-card);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .sidebar a {
+    color: var(--text-secondary);
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .sidebar a.active,
+  .sidebar a:hover {
+    background: var(--bg);
+    color: var(--text);
+  }
+  .main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+  .profile {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+
+
+
+.profile-info { display: flex; align-items: center; gap: 1rem; }
+.profile-info img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+.title { color: var(--text-secondary); font-size: 0.9rem; }
+.social { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.social a { color: var(--text-secondary); font-size: 1.1rem; }
+.contact { text-align: right; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; margin-bottom: 1rem; }
+
+
+  /*** COMPONENTS ***/
+  /* Filters / Tabs */
+.filters {
+  display: flex;
+  border-bottom: 1px solid var(--bg-card);
+  margin-bottom: 1.5rem;
+}
+.filters a { 
+  margin-left: 0.75rem; 
+  color: var(--blue); 
+  text-decoration: none; 
+  cursor: pointer; 
+
+}
+.filters a.active { text-decoration: underline; }
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: background 0.2s;
+  
+}
+
+.tab:hover {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--bg-card);
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+}
+
+  
+/* Grid & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  justify-content: center;  /* Horizontal center */
+
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 128px; /* Or 32px or 24px for smaller icons */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+.label {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+.btn {
+  margin-top: auto;
+  background: var(--blue);
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: background 0.2s ease;
+}
+
+
+
+  
+  /* Contact Links */
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 180px;
+    padding: 0.5rem 1rem;
+    background: var(--orange);
+    color: var(--text-light);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+  }
+  .btn-link:hover {
+    background: var(--orange-dark);
+  }
+  
+
+
+/* BIO */
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.bio p {
+  line-height: 1.6;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  text-align: justify;
+  max-width: 700px;      /* limit line length for readability */
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 180px 1fr;  /* fixed image, fluid text */
+  gap: 2rem;                         /* space between columns */
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.profile-picture{
+  display: flex;
+  justify-content: center;  /* Horizontal center */
+  align-items: center;      /* Vertical center */
+}
+
+.about-photo {
+  display: block;
+  float: left;               /* let text wrap around */
+  max-width: 600px; /* Do not go wider than 300px */
+  max-height: 400px; /* Do not go taller than 200px */
+  justify-content: center;
+  object-fit: cover;         /* crop to fill */
+  border-radius: 20%;        /* circle */
+  margin: auto;   /* space on right & bottom */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Skills */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+}
+.skill-item {
+  background: var(--accent);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+  
+
+/* EXPERIENCE TIMELINE */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid var(--accent);
+  margin-left: 0.5rem;
+}
+
+.timeline li {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0.75rem;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline .period {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timeline strong {
+  color: var(--text);
+}
+
+
+
+
+
+
+/*** SOCIAL ICONS ***/
+.linkedin-icon {
+  color: #0077B5; /* LinkedIn blue */
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  color: #005582; /* Darker blue on hover */
+}
+
+
+.github-icon {
+  color: #333;        /* GitHub black */
+  font-size: 24px;    /* adjust size */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.github-icon:hover {
+  color: #24292f;     /* darker on hover */
+}
+
+
+
+/* FontAwesome social icons */
+.social a .fa-linkedin,
+.social a .fa-github {
+  font-size: 1.5rem;  /* desktop base size */
+  transition: color 0.2s;
+}
+
+/* Hover effect */
+.social a:hover .fa-linkedin,
+.social a:hover .fa-github {
+  color: var(--accent);
+}
+
+/* Contact Form */
+#contact {
+margin-top: 3rem;
+justify-content: center;     /* new: horizontal centering */
+align-items: center;         /* new: vertical centering (if needed) */
+}
+
+.contact-card {
+  display: flex; 
+  flex-direction: column;  
+  align-items: center; 
+  gap: 1.5rem;                        /* space between columns */
+  max-width: 600px; /* limit width for larger screens */
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto
+}
+
+.contact-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;        /* match your h2 scale */
+  color: var(--text);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 800px; /* limit width for larger screens */;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--input-border);
+  border-radius: 30px;       /* fully pill-shaped */
+  font-size: 1.1rem;
+  color: var(--text);
+  background: var(--bg-card);
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--placeholder);
+}
+
+/* Left-align the first three fields */
+#name,
+#email,
+#subject {
+  text-align: left;
+}
+
+/* Center the textarea block (and its text) */
+#message {
+
+  margin: 0 auto;
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Center the button at 60% width */
+.btn-submit {
+  display: block;
+  width: 60%;
+  padding: 0.75rem;
+  margin: 1.5rem auto 0;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  
+}
+
+.btn-submit:hover {
+  background: var(--orange); /* or var(--accent-hover) if preferred */
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  /* Social icon size on mobile */
+  .social a .fa-linkedin,
+  .social a .fa-github {
+    font-size: 1.25rem;
+  }
+
+  /* Responsive layout tweaks */
+  body {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+  .main .profile {
+    margin-top: 3.5rem; /* space for hamburger button */
+  }
+
+
+  h2, h3, p {
+    font-size: 90%;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Stack about section vertically */
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin: 0 auto 1rem;
+  }
+
+  .bio p {
+    max-width: unset;
+  }
+
+  /* Hamburger button for mobile */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    font-size: 2rem;
+    background: var(--bg-card);
+    color: var(--text);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Sidebar for mobile (initially hidden) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background: var(--bg-card);
+    padding: 4rem 1rem 1rem 2.5rem; /* top space for hamburger, left space for icon/text */
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar a {
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    color: var(--text-secondary);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .profile-info {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-links {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .btn-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    min-width: unset;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .btn-link .label {
+    font-size: 0.95rem;
+  }
+
+}
+/* Social icon size on large screens */
+@media (min-width: 1200px) {
+  .social a .fa-linkedin,
+  .social a .fa-github {
+    font-size: 1.75rem;
+  }
+}
+
+/* RESPONSIVE: two-column on larger screens */
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience {
+    grid-column: 1 / -1;
+  }
+}
